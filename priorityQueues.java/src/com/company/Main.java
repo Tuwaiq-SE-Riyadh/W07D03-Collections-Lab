@@ -8,19 +8,19 @@ public class Main {
     public static void main(String[] args) {
 
         PriorityQueue<String> queueOne = new PriorityQueue<>(Arrays.asList());
-        queueOne.add("George");
-        queueOne.add("Jim");
-        queueOne.add("John");
-        queueOne.add("Blake");
-        queueOne.add("Kevin");
-        queueOne.add("Michael");
+        queueOne.offer("George");
+        queueOne.offer("Jim");
+        queueOne.offer("John");
+        queueOne.offer("Blake");
+        queueOne.offer("Kevin");
+        queueOne.offer("Michael");
 
         PriorityQueue<String> queueTow = new PriorityQueue<>(Arrays.asList());
-        queueTow.add("George");
-        queueTow.add("Katie");
-        queueTow.add("Kevin");
-        queueTow.add("Michelle");
-        queueTow.add("Ryan");
+        queueTow.offer("George");
+        queueTow.offer("Katie");
+        queueTow.offer("Kevin");
+        queueTow.offer("Michelle");
+        queueTow.offer("Ryan");
 
 
         System.out.println("queueOne => " + queueOne);
