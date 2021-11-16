@@ -12,11 +12,7 @@ public class priorityQueues {
             queue1.offer("Blake");
             queue1.offer("Kevin");
             queue1.offer("Michael");
-//            System.out.println("Priority queue using Comparable:");
-//
-//            while (queue1.size() > 0) {
-//                System.out.print(queue1.remove() + " ");
-//            }
+
 
             PriorityQueue<String> queue2 = new PriorityQueue<String>();
             System.out.println(" ");
@@ -26,11 +22,7 @@ public class priorityQueues {
             queue2.offer("Kevin");
             queue2.offer("Michelle");
             queue2.offer("Ryan");
-//            System.out.println("\nPriority queue using Comparator:");
-//
-//            while (queue2.size() > 0) {
-//                System.out.print(queue2.remove() + " ");
-//            }
+
             System.out.println("After union");
             union(queue1,queue2);
             System.out.println("\nAfter intersection");
@@ -41,25 +33,25 @@ public class priorityQueues {
 
 
 
-        public static PriorityQueue<String> union(PriorityQueue<String> queue1, PriorityQueue<String> queue2){
+        public static void union(PriorityQueue<String> queue1, PriorityQueue<String> queue2){
             PriorityQueue<String> queue3 = new PriorityQueue<>();
             queue3.addAll(queue1);
             queue3.addAll(queue2);
                System.out.print(queue3);
 
-            return queue3;
+
         }
 
-        public static PriorityQueue<String> intersection(PriorityQueue<String> queue1, PriorityQueue<String> queue2) {
+        public static void intersection(PriorityQueue<String> queue1, PriorityQueue<String> queue2) {
             PriorityQueue<String> queue3 = new PriorityQueue<>(queue1);
             queue3.retainAll(new HashSet<>(queue2));
 
                 System.out.print(queue3);
 
-            return queue3;
+
         }
 
-    public static PriorityQueue<String> difference(PriorityQueue<String> q1,PriorityQueue<String> q2) {
+    public static void difference(PriorityQueue<String> q1,PriorityQueue<String> q2) {
         PriorityQueue<String> q3 = new PriorityQueue<>();
         q3.addAll(q1);
         q3.addAll(q2);
@@ -69,7 +61,7 @@ public class priorityQueues {
             q4.add(element);
         }
         System.out.println(q4);
-            return q3;
+
         }
     }
 
