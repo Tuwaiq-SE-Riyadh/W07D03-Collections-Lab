@@ -27,8 +27,58 @@ public class priorityQueues {
         priorityQueue2.offer("Michelle");
         priorityQueue2.offer("Ryan");
 
-        findUnion(priorityQueue1,priorityQueue2);
+//        findUnion(priorityQueue1,priorityQueue2);
+//      findDifference(priorityQueue1,priorityQueue2);
+      findIntersection(priorityQueue1,priorityQueue2);
+
+
     }
+
+    private static void findIntersection(PriorityQueue<String> priorityQueue1, PriorityQueue<String> priorityQueue2)
+    {
+        PriorityQueue <String> result = new PriorityQueue<>();
+        System.out.println("=====================================================");
+        System.out.println("1:"+priorityQueue1);
+        System.out.println("2:"+priorityQueue2);
+        System.out.println("-------- After Intersection --------");
+
+        while (priorityQueue2.size() > 0)
+        {
+            if(priorityQueue1.contains(priorityQueue2.peek()))
+            {
+                result.offer(priorityQueue2.remove());
+            }
+            else {
+                priorityQueue2.remove();
+            }
+        }
+        System.out.println(result);
+        System.out.println("=====================================================");
+    }
+
+    private static void findDifference(PriorityQueue<String> priorityQueue1, PriorityQueue<String> priorityQueue2)
+    {
+        PriorityQueue <String> result = new PriorityQueue<>();
+        System.out.println("=====================================================");
+        System.out.println("1:"+priorityQueue1);
+        System.out.println("2:"+priorityQueue2);
+        System.out.println("-------- After Difference --------");
+
+        while (priorityQueue2.size() > 0)
+        {
+            if(!priorityQueue1.contains(priorityQueue2.peek()))
+            {
+                result.offer(priorityQueue2.remove());
+            }
+            else {
+                priorityQueue2.remove();
+            }
+        }
+        System.out.println(result);
+        System.out.println("=====================================================");
+
+    }
+
 
     private static void findUnion(PriorityQueue<String> priorityQueue1, PriorityQueue<String> priorityQueue2)
     {
@@ -48,7 +98,6 @@ public class priorityQueues {
             else {
                 priorityQueue2.remove();
             }
-
         }
         System.out.println(result);
         System.out.println("=====================================================");
