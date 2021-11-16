@@ -6,12 +6,12 @@ public class priorityQueues {
             PriorityQueue<String> queue1 = new PriorityQueue<String>();
             System.out.println(" ");
             //Adding strings to queue1
-            queue1.add("George");
-            queue1.add("Jim");
-            queue1.add("John");
-            queue1.add("Blake");
-            queue1.add("Kevin");
-            queue1.add("Michael");
+            queue1.offer("George");
+            queue1.offer("Jim");
+            queue1.offer("John");
+            queue1.offer("Blake");
+            queue1.offer("Kevin");
+            queue1.offer("Michael");
 //            System.out.println("Priority queue using Comparable:");
 //
 //            while (queue1.size() > 0) {
@@ -36,7 +36,7 @@ public class priorityQueues {
             System.out.println("\nAfter intersection");
             intersection(queue1,queue2);
             System.out.println("\nAfter difference");
-            difference(queue1,queue2,intersection(queue1,queue2));
+            difference(queue1,queue2);
         }
 
 
@@ -59,14 +59,16 @@ public class priorityQueues {
             return queue3;
         }
 
-    public static PriorityQueue<String> difference(PriorityQueue<String> q1,PriorityQueue<String> q2, PriorityQueue<String> intersectionQueue) {
+    public static PriorityQueue<String> difference(PriorityQueue<String> q1,PriorityQueue<String> q2) {
         PriorityQueue<String> q3 = new PriorityQueue<>();
         q3.addAll(q1);
-
-       q3.removeAll((intersectionQueue));
-
-                System.out.print(q3);
-
+        q3.addAll(q2);
+        PriorityQueue<String> q4 = new PriorityQueue<>();
+        for (String element : q3) {
+            if(!q4.contains(element))
+            q4.add(element);
+        }
+        System.out.println(q4);
             return q3;
         }
     }
