@@ -1,13 +1,9 @@
 # Collections Lab
 
 ## Task1 
-
-Follow these steps:
-
-* Create a text file called randomWords.txt and a Java file called alphabeticalWords.java. Inside, write a program that reads words from the text file and displays all the words (duplicates allowed) in ascending alphabetical order. The words must start with a letter.
+![image](https://user-images.githubusercontent.com/72529306/142079128-9282d149-68ec-47b4-ae3e-8dacd8950c59.png)
 
 ## Task2
-
-Follow these steps:
-* Create a Java file called priorityQueues.java. Inside, create two priority queues, {"George", "Jim", "John", "Blake", "Kevin", "Michael"} and {"George", "Katie", "Kevin", "Michelle", "Ryan"}.
-* Find their [union](https://en.wikipedia.org/wiki/Union_(set_theory)), [difference](https://en.wikipedia.org/wiki/Complement_(set_theory)), and [intersection](https://en.wikipedia.org/wiki/Intersection_(set_theory)).
+![image](https://user-images.githubusercontent.com/72529306/142079186-cf7be365-8237-4773-899c-053e9360134e.png)
+![image](https://user-images.githubusercontent.com/72529306/142079208-731c233c-2a53-4d06-8b60-83b0e5a24847.png)
+![image](https://user-images.githubusercontent.com/72529306/142079231-6162db1f-a7f8-4905-8dc9-bcc9b742028f.png)
